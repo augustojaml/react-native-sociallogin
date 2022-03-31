@@ -1,0 +1,9 @@
+{
+  "expo": {
+    "name": "sociallogin",
+    "slug": "sociallogin",
+    "scheme": "sociallogin",
+    "version": "1.0.0",
+    "assetBundlePatterns": ["**/*"]
+  }
+}
