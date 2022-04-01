@@ -18,8 +18,6 @@ import {
 export function Home() {
   const { user, signInGoogle, signOutGoogle, isLoadingLogin } = useAuth();
 
-  console.log(isLoadingLogin);
-
   return (
     <>
       <StatusBar style="light" />

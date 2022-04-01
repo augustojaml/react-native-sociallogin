@@ -28,15 +28,13 @@ function AuthHookProvider({ children }: IAuthHookProvider) {
   const [user, setUser] = useState<ISocialUser>();
 
   const [request, response, promptAsync] = Google.useAuthRequest({
-    androidClientId: process.env.GOOGLE_CLIENT_ID,
-    iosClientId: process.env.GOOGLE_CLIENT_ID,
-    expoClientId: process.env.GOOGLE_CLIENT_ID,
-    webClientId: process.env.GOOGLE_CLIENT_ID,
+    androidClientId: process.env.ANDROID_CLIENT_ID,
+    expoClientId: process.env.EXPO_CLIENT_ID,
   });
 
   async function signInGoogle() {
     setIsLoadingLogin(true);
-    await promptAsync({ useProxy: true, showInRecents: true });
+    await promptAsync({ useProxy: false });
     setIsLoadingLogin(false);
   }
 
